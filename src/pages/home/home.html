@@ -1,14 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="page">
+  <div class="header">
+    <h2 class="title">Crypto currencies list</h2>
+    <button class="refresh" ion-fab mini color="light" (click)="retrieve()"><ion-icon name="refresh"></ion-icon></button>
+  </div>
+  <div class="currencies" padding>
+    <ion-row class="currency" *ngFor="let currency of currencies" (click)="showDetails(currency)">
+      <ion-col>
+        <img class="logo" [src]="getIcon(currency.symbol)" alt="">
+      </ion-col>
+      <ion-col>
+        <p class="name">{{ currency.name }}</p>
+        <p class="rank">Rank {{ currency.rank }}</p>
+      </ion-col>
+      <ion-col>
+        <p class="dollars">{{ currency.price_usd }} $</p>
+        <p class="evolution" [ngClass]="{'negative': currency.percent_change_1h < 0 }" >{{currency.percent_change_1h }} %</p>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>

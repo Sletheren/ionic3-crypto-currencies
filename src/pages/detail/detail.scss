@@ -1,0 +1,39 @@
+page-detail {
+  .logo {
+    margin-bottom: 30px;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
+
+  .name{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin: 20px auto 5px;
+  }
+  .rank {
+    color: #999;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  .box {
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    .value {
+      background: color($colors, danger);
+      color: white;
+      font-size:20px;
+      text-align: center;
+    }
+    .evolution {
+      color:white;
+      font-size:20px;
+      text-align: center;
+    }
+  }
+}

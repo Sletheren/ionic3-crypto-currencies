@@ -1,0 +1,27 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{ currency.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="detail">
+    <div class="logo">
+      <img [src]="currency.symbol" alt="">
+    </div>
+    <h2 class="name">{{ currency.name }}</h2>
+    <p class="rank">Rank {{ currency.rank }}</p>
+    <ion-row class="box">
+      <ion-col class="value" >{{currency.price_usd}} $</ion-col>
+      <ion-col class="evolution" >{{currency.percent_change_1h}} %</ion-col>
+    </ion-row>
+  </div>
+</ion-content>
